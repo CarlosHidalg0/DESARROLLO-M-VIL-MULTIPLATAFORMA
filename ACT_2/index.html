@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Caliente</title>
+  <!-- Importamos Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="logo-caliente.png" alt="Caliente Logo">
+    </div>
+
+    <!-- Usuario -->
+    <div class="input-group">
+      <span class="material-icons">person</span>
+      <input type="text" placeholder="USUARIO">
+    </div>
+
+    <!-- Contraseña -->
+    <div class="input-group">
+      <span class="material-icons">lock</span>
+      <input type="password" placeholder="CONTRASEÑA" id="password">
+      <span class="material-icons eye-icon" onclick="togglePassword()">visibility</span>
+    </div>
+
+    <!-- Recordar usuario -->
+    <div class="checkbox">
+      <input type="checkbox" id="remember">
+      <label for="remember">Recordar mi usuario</label>
+    </div>
+
+    <!-- Botón acceder -->
+    <button class="button primary">ACCEDER</button>
+
+    <!-- Separador "Ó" -->
+    <div class="separator">————————— Ó ——————————</div>
+
+    <!-- Iniciar sesión con Apple -->
+    <button class="button secondary">Iniciar sesión con Apple</button>
+
+    <!-- Iniciar sesión con Facebook -->
+    <button class="button facebook">Iniciar sesión con Facebook</button>
+
+    <!-- Línea de separación -->
+    <hr class="divider">
+
+    <!-- Olvidaste tu contraseña -->
+    <a href="#" class="forgot-link">¿Olvidaste tu contraseña o usuario?</a>
+
+    <div class="promo-text">
+      <p><strong>Regístrate y</strong> <span class="red-text">recibe</span></p>
+      <p class="promo-amount">$1,000</p>
+      <p class="promo-subtitle">DE REGALO</p>
+      <p class="promo-note">+ DUPLICAMOS TU PRIMER DEPÓSITO</p>
+    </div>
+
+    <!-- Botón de registro -->
+    <button class="register-button">REGÍSTRATE</button>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const eyeIcon = document.querySelector(".eye-icon");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.textContent = "visibility_off";
+      } else {
+        passwordInput.type = "password";
+        eyeIcon.textContent = "visibility";
+      }
+    }
+  </script>
+</body>
+</html>
